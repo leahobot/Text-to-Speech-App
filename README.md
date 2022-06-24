@@ -1,6 +1,6 @@
 # Text to Speech Application
 
-This Text-to-speech application reads text typed in by the user * *aloud* *. 
+This Text-to-speech application reads text typed-in by the user * *aloud* *. 
 
 It helps people who need additional assistance to hear text that's printed on-screen.
 
