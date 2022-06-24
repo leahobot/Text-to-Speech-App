@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+			integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		/>
+		<link
+			rel="shortcut icon"
+			href="./favicon_io/favicon.ico"
+			type="image/x-icon"
+		/>
+		<link rel="stylesheet" href="./style.css" />
+		<title>Text-to-Speech | Home</title>
+	</head>
+
+	<body>
+		<header>
+			<h1>Text to Speech Reader</h1>
+			<button class="open-text">Click here to open a text-box</button>
+		</header>
+
+		<aside class="text-container">
+			<div class="text-heading">
+				<p>Choose a Voice</p>
+				<i class="fa-solid fa-circle-xmark fa-2x close"></i>
+			</div>
+			<select id="select-voice"></select>
+			<textarea
+				id="text-area"
+				rows="5"
+				placeholder="Type text here..."
+			></textarea>
+			<div class="button-container">
+				<button class="read-text">
+					Read Text <i class="fa-solid fa-volume-high"></i>
+				</button>
+				<button class="delete-text">Delete</button>
+			</div>
+		</aside>
+
+		<main class="main-container"></main>
+
+		<footer>
+			<small>Text-to-Speech © 2022</small>
+		</footer>
+
+		<div class="body-contrast"></div>
+
+		<script src="./app.js"></script>
+	</body>
+</html>

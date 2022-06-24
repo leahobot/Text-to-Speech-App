@@ -1,0 +1,265 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+		Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+:root {
+	--primary-color: #56669d;
+	--secondary-color: #fa9490;
+}
+
+body {
+	color: white;
+	position: relative;
+	font-size: 1.4rem;
+	background-color: #7f7f7f;
+}
+
+.body-contrast {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+	display: none;
+	background-color: rgba(0, 0, 0, 0.8);
+}
+
+header {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 1rem;
+	position: sticky;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 15rem;
+	background-color: #7f7f7f;
+	z-index: 1;
+}
+
+header h1 {
+	font-size: 3.5rem;
+}
+
+header .open-text,
+.text-container .read-text,
+.text-container .delete-text {
+	color: white;
+	background-color: var(--secondary-color);
+	border: 0;
+	padding: 0.6rem 1.3rem;
+	border-radius: 0.4rem;
+	font-weight: 600;
+	transition: all 0.3s ease;
+}
+
+header .open-text:hover,
+.text-container .read-text:hover,
+.text-container .delete-text:hover {
+	background-color: #f9736f;
+}
+
+header .open-text:active,
+.text-container .read-text:active,
+.text-container .delete-text:active {
+	transform: translateY(3px);
+}
+
+.text-container {
+	position: absolute;
+	display: flex;
+	flex-direction: column;
+	top: 8%;
+	left: 22%;
+	height: 23rem;
+	width: 60rem;
+	padding: 1.2rem 2rem;
+	border-radius: 0.5rem;
+	box-shadow: 3px 3px 15px 3px rgba(0, 0, 0, 0.5);
+	z-index: 2;
+	background-color: var(--primary-color);
+	transform: translateY(-300%);
+	transition: all 1s ease-in-out;
+}
+
+.text-heading {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-end;
+	margin-bottom: 1rem;
+}
+
+.text-container .close {
+	transition: all 0.3s ease-in;
+}
+
+.text-container .close:hover {
+	color: var(--secondary-color);
+}
+
+.text-container .close:active {
+	transform: translateY(3px);
+}
+
+.text-heading p {
+	font-weight: 600;
+}
+
+#select-voice {
+	width: 100%;
+	height: 3rem;
+	outline: 0;
+	border: 0;
+	padding: 0 1rem;
+	margin-bottom: 1rem;
+	border-radius: 0.2rem;
+}
+
+#text-area {
+	outline: 0;
+	width: 100%;
+	padding: 0.5rem 1rem;
+	border-radius: 0.3rem;
+	resize: none;
+}
+
+.text-container .button-container {
+	display: flex;
+	justify-content: center;
+	gap: 2rem;
+	margin-top: 1rem;
+}
+
+.main-container {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	gap: 3rem 1.7rem;
+	margin-top: 3rem;
+}
+
+.box {
+	box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5);
+	width: 24rem;
+	height: 22.5rem;
+	border-radius: 0.3rem;
+	overflow: hidden;
+	transition: all 0.5s ease;
+	cursor: pointer;
+}
+
+.box:hover {
+	transform: scale(1.05);
+}
+
+.box:active {
+	transform: translateY(2px);
+}
+
+.active {
+	box-shadow: 2px 2px 15px 2px var(--secondary-color);
+}
+
+.box img {
+	width: 24rem;
+	height: 18rem;
+	object-fit: cover;
+}
+
+.box .image-text {
+	font-weight: 600;
+	padding: 0.3rem 1rem;
+	text-transform: uppercase;
+}
+
+footer {
+	padding: 4rem 0 1rem 0;
+	text-align: center;
+	font-weight: 600;
+}
+
+@media screen and (max-width: 920px) and (min-width: 691px) {
+	.text-container {
+		top: 5%;
+		left: 18%;
+		height: 25rem;
+		width: 50rem;
+	}
+}
+
+@media screen and (max-width: 690px) {
+	.text-container {
+		top: 3%;
+		left: 15%;
+		height: 27rem;
+		width: 45rem;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	header {
+		height: 32vh;
+	}
+
+	header h1 {
+		font-size: 3.5rem;
+	}
+
+	.text-container {
+		top: 2%;
+		left: 14%;
+		height: 29rem;
+		width: 35rem;
+	}
+
+	#text-area {
+		height: 15rem;
+	}
+}
+
+@media screen and (max-width: 430px) {
+	header {
+		height: 30vh;
+	}
+
+	header h1 {
+		font-size: 3rem;
+	}
+
+	.text-container {
+		top: 1.5%;
+		left: 13%;
+		height: 26rem;
+		width: 30rem;
+		font-size: 1.3rem;
+	}
+
+	#text-area {
+		height: 12rem;
+	}
+
+	.text-container button {
+		font-size: 1.2rem;
+	}
+}
+
+@media screen and (max-width: 350px) {
+	.text-container {
+		top: 1.5%;
+		left: 11%;
+		height: 26rem;
+		width: 25rem;
+		font-size: 1.3rem;
+	}
+}
