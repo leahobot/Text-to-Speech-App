@@ -2,7 +2,7 @@
 
 This Text-to-speech application reads text typed-in by the user * *aloud* *. 
 
-It helps people who need additional assistance to hear text that's printed on-screen.
+It helps people with accessibilty needs to hear/listen to the audio of text and everyday conversations. And also for everyone who loves to listen to audio text.
 
 It produces natural sounding synthesised text from the words that you have entered in and the synthesised voice can be adjusted to different accents to suit ones needs.
 
